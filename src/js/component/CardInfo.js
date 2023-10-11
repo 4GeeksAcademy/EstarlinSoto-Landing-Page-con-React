@@ -26,6 +26,7 @@
     urlBtn : "https://es.wikipedia.org/wiki/Adolf_Hitler"
 },
 
+
 ]
 
 export default info

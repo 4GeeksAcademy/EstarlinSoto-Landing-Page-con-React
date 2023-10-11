@@ -15,12 +15,12 @@ const Home = () => {
 				<JumboTron />
 
 		
-	<div class=" py-4 ">
-        <div class="cardContainer">
-			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+	<div className=" py-4 ">
+        <div className="cardContainer">
+			<div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
 				
 				{
-					CardInfo.map((ele, i)=> {
+					CardInfo.map((ele)=> {
 
 				return (<Card cardTitle={ele.name} cardImgUrl={ele.img} cardDescription={ele.Description} urlBtn={ele.urlBtn}/>)				
 			})
