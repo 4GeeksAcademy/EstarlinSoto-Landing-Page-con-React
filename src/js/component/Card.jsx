@@ -1,69 +1,32 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const Card = ()=> {
+const Card = (props)=> {
     return(
-        <div class=" py-4 ">
-        <div class="cardContainer">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
             <div class="col text-center ">
               <div class="card shadow-sm">
-                <img src="https://picsum.photos/500/325" alt="IMG CARD!" />
+                <img src={props.cardImgUrl} alt="IM A CARD!" />
                 <div class="card-body"> 
-                <h1>Card title</h1>
-                  <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat ipsam odit blanditiis, quos aperiam laborum quidem accusantium, sunt eius unde labore, excepturi ab. Est, cum delectus a repudiandae neque quaerat.</p>
+                <h1>{props.cardTitle}</h1>
+                  <p class="card-text">{props.cardDescription}</p>
                 </div>
                 <div class="d-flex justify-content-center align-items-center border p-3">
-                  <button type="button" class="btn btn-primary">Find Out More!</button>
+                <a className="btn btn-primary btn-lg" href={props.urlBtn} role="button">Click for more Info</a>
+                  
                   </div>
               </div>
             </div>
-            <div class="col text-center ">
-              <div class="card shadow-sm">
-                <img src="https://picsum.photos/500/325" alt="IMG CARD!" />
-                <div class="card-body"> 
-                <h1>Card title</h1>
-                  <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat ipsam odit blanditiis, quos aperiam laborum quidem accusantium, sunt eius unde labore, excepturi ab. Est, cum delectus a repudiandae neque quaerat.</p>
-                </div>
-                <div class="d-flex justify-content-center align-items-center border p-3">
-                  <button type="button" class="btn btn-primary">Find Out More!</button>
-                  </div>
-              </div>
-            </div>
-            <div class="col text-center ">
-              <div class="card shadow-sm">
-                <img src="https://picsum.photos/500/325" alt="IMG CARD!" />
-                <div class="card-body"> 
-                <h1>Card title</h1>
-                  <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat ipsam odit blanditiis, quos aperiam laborum quidem accusantium, sunt eius unde labore, excepturi ab. Est, cum delectus a repudiandae neque quaerat.</p>
-                </div>
-                <div class="d-flex justify-content-center align-items-center border p-3">
-                  <button type="button" class="btn btn-primary">Find Out More!</button>
-                  </div>
-              </div>
-            </div>
-            <div class="col text-center ">
-              <div class="card shadow-sm">
-                <img src="https://picsum.photos/500/325" alt="IMG CARD!" />
-                <div class="card-body"> 
-                <h1>Card title</h1>
-                  <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat ipsam odit blanditiis, quos aperiam laborum quidem accusantium, sunt eius unde labore, excepturi ab. Est, cum delectus a repudiandae neque quaerat.</p>
-                </div>
-                <div class="d-flex justify-content-center align-items-center border p-3">
-                  <button type="button" class="btn btn-primary">Find Out More!</button>
-                  </div>
-              </div>
-            </div>
-            
-          </div>
 
-          
-
-        
-
-        </div>
-      </div>
     );
 
 }
+
+Card.propTypes = {
+  cardImgUrl: PropTypes.string,
+  cardTitle: PropTypes.string,
+  cardDescription: PropTypes.string,
+  urlBtn: PropTypes.string,
+};
+
 
 export default Card;

@@ -28,3 +28,8 @@ body{
    
     background-color: rgb(54,69,79);
 }
+
+img{
+    max-width: auto;
+    max-height: 600px;
+}
