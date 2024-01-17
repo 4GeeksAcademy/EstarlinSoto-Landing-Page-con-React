@@ -1,42 +1,34 @@
 import React from "react";
 
-//include images into your bundle
+//se hacen las importaciones para incluir los elementos en el home page
 import NavBar from "./NavBar.jsx";
 import JumboTron from "./JumboTron.jsx";
 import Card from "./Card.jsx";
 import CardInfo from "./CardInfo.js";
 
 
-//create your first component
+
 const Home = () => {
 	return (
-			<div>
-				<NavBar />		
-				<JumboTron />
+		<div className="">
+			<NavBar /> {/*Traemos el elemnto navbar*/}
 
-		
-	<div className=" py-4 ">
-        <div className="cardContainer">
-			<div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-				
-				{
-					CardInfo.map((ele)=> {
+			<JumboTron /> {/* traemos el elemento jumbotron*/}
 
-				return (<Card cardTitle={ele.name} cardImgUrl={ele.img} cardDescription={ele.Description} urlBtn={ele.urlBtn}/>)				
-			})
-			}
-
+			<div className=" py-4 ">
+				<div className="cardContainer">
+					<div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+						{CardInfo.map((ele) => { return (<Card cardTitle={ele.name} cardImgUrl={ele.img} cardDescription={ele.Description} urlBtn={ele.urlBtn} />) })}{/*se hace un mapeo del objeto info importado como CardInfo*/}
+					</div>
+				</div>
+				<div className="footer">
+					<h4 className="text-center py-5 text-light">
+						Copyright © Your Website 2023
+					</h4>
+				</div>
 			</div>
 		</div>
 
-					<div className="footer">
-						<h4 className="text-center py-5 mb-0 text-light">
-							Copyright © Your Website 2023
-						</h4>
-        		</div>
-			</div>
-			</div>
-			
 	);
 };
 
